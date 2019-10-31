@@ -1,0 +1,42 @@
+#p01 {
+  color: blueviolet;
+}
+
+.test {
+  color: powderblue;
+}
+
+div span {
+  color: royalblue;
+}
+
+div > span{
+  color:yellow;
+}
+
+div:hover {
+  background-color: yellowgreen;
+}
+
+
+
+table#t01 tbody tr:nth-child(even){
+  background-color: antiquewhite;
+}
+table#t01 tbody tr:nth-child(odd){
+  background-color: aquamarine;
+}
+
+table#t01 thead {
+  background-color: slategrey;
+}
+
+#t01 {
+  color: darkblue;
+  border-collapse: collapse;
+  border-spacing: 2px;
+}
+
+#t01 caption {
+  color: royalblue
+}
