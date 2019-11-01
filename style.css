@@ -18,8 +18,6 @@ div:hover {
   background-color: yellowgreen;
 }
 
-
-
 table#t01 tbody tr:nth-child(even){
   background-color: antiquewhite;
 }

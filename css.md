@@ -148,3 +148,34 @@ ___If internal style and external CSS file affects the same element, the last se
       color:black;
     }
     ```
+
+- Attribute Selector
+
+  ```css
+  a[target]{
+    color:yellow;
+  }
+  a[target="_blank"]{
+    color:red;
+  }
+  a[title~="test"]{
+    color:blue;
+  }
+  /*title contains word "test" surrounded by space*/
+  a[class|="top"]{
+    color:white;
+  }
+  /*Class start with word "top" surrounded by space or followed by "-"*/
+  a[class^="top"]{
+    color:black;
+  }
+  /*Class begin with string "top"*/
+  a[calss$="top"]{
+    color:green;
+  }
+  /*Class ends with string "top" */
+  a[class*="top"]{
+    color:orange;
+  }
+  /*Class contains string "top"*/
+  ```
