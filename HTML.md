@@ -232,7 +232,6 @@
       - step
       - value
 
-
     ```html
     <form action="post">
       <fieldset>
@@ -264,6 +263,7 @@
         <option value="richard">
         <option value="biqiang">
       </datalist>
+
     </form>
     ```
 
