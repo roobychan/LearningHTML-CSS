@@ -1,0 +1,121 @@
+FORM alv_out .
+
+*--Organize Table for Display
+  TRY.
+      CASE 'X'.
+        WHEN p_mod1.
+          cl_salv_table=>factory( IMPORTING  r_salv_table = go_salv_list
+                                  CHANGING   t_table      = gt_it655 ).
+        WHEN p_mod2.
+          cl_salv_table=>factory( IMPORTING  r_salv_table = go_salv_list
+                                  CHANGING   t_table      = gt_rep2 ).
+        WHEN p_mod3.
+          cl_salv_table=>factory( IMPORTING  r_salv_table = go_salv_list
+                                  CHANGING   t_table      = gt_rep3 ).
+      ENDCASE.
+    CATCH cx_salv_msg.
+      MESSAGE ID     sy-msgid
+              TYPE   sy-msgty
+              NUMBER sy-msgno
+              WITH   sy-msgv1
+                     sy-msgv2
+                     sy-msgv3
+                     sy-msgv4.
+  ENDTRY.
+
+  PERFORM enable_layout_settings USING go_salv_list.
+  PERFORM optimize_column_width USING go_salv_list.
+
+  go_functions_list = go_salv_list->get_functions( ).
+  go_functions_list->set_all( abap_true ).
+
+  IF sy-subrc EQ 0 AND go_salv_list IS NOT INITIAL..
+    CALL METHOD go_salv_list->display.
+  ENDIF.
+
+ENDFORM.
+*&---------------------------------------------------------------------*
+*&      Form  ENABLE_LAYOUT_SETTINGS
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM enable_layout_settings USING p_salv_list TYPE REF TO cl_salv_table.
+
+  DATA: layout_settings TYPE REF TO cl_salv_layout,
+        layout_key      TYPE salv_s_layout_key.
+
+  layout_settings = p_salv_list->get_layout( ).
+
+  layout_key-report = sy-repid.
+  layout_settings->set_key( layout_key ).
+
+  layout_settings->set_save_restriction( if_salv_c_layout=>restrict_none ).
+
+ENDFORM.
+*&---------------------------------------------------------------------*
+*&      Form  OPTIMIZE_COLUMN_WIDTH
+*&---------------------------------------------------------------------*
+*       text
+*----------------------------------------------------------------------*
+*  -->  p1        text
+*  <--  p2        text
+*----------------------------------------------------------------------*
+FORM optimize_column_width USING p_salv_list TYPE REF TO cl_salv_table.
+
+  DATA: columns TYPE REF TO cl_salv_columns_table.
+  DATA: lr_column TYPE REF TO cl_salv_column_table.
+
+  columns = p_salv_list->get_columns( ).
+
+  CASE 'X'.
+    WHEN p_mod1.
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'ESSONLY' ).
+      lr_column->set_visible( '' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'ESSONLYT' ).
+      lr_column->set_short_text( 'ESS Only' ).
+      lr_column->set_medium_text( 'ESS Only' ).
+    WHEN p_mod2.
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'WERKS' ).
+      lr_column->set_visible( '' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'ZPAPL' ).
+      lr_column->set_short_text( 'ZPAPL' ).
+      lr_column->set_medium_text( 'ZPAPL' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'ZGVRS' ).
+      lr_column->set_short_text( 'ZGVRS' ).
+      lr_column->set_medium_text( 'ZGVRS' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'PRINT' ).
+      lr_column->set_short_text( 'Prt.Switch' ).
+      lr_column->set_medium_text( 'Prt.Switch' ).
+    WHEN p_mod3.
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'WERKS' ).
+      lr_column->set_visible( '' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'ESSONLY' ).
+      lr_column->set_short_text( 'Active' ).
+      lr_column->set_medium_text( 'Active' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'NESS' ).
+      lr_column->set_short_text( 'Inactive' ).
+      lr_column->set_medium_text( 'Inactive' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'NDATA' ).
+      lr_column->set_short_text( 'No Data' ).
+      lr_column->set_medium_text( 'No Data' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'ALL' ).
+      lr_column->set_short_text( 'All' ).
+      lr_column->set_medium_text( 'All' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'PESS' ).
+      lr_column->set_short_text( 'Active%' ).
+      lr_column->set_medium_text( 'Active%' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'PNESS' ).
+      lr_column->set_short_text( 'Inactive%' ).
+      lr_column->set_medium_text( 'Inactive%' ).
+      lr_column ?= p_salv_list->get_columns( )->get_column( 'PNDATA' ).
+      lr_column->set_short_text( 'No Data%' ).
+      lr_column->set_medium_text( 'No Data%' ).
+
+  ENDCASE.
+
+  columns->set_optimize( ).
+
+ENDFORM.

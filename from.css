@@ -1,0 +1,35 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+fieldset{
+  background-color: #dddcdd;
+  border-radius: 10px;
+}
+
+ol{
+  list-style: none;
+}
+
+li{
+  clear: both;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+label{
+  float: left;
+  width: 100px;
+}
+
+input{
+  border: 1px solid #333333;
+}
+
+input:focus{
+  background-color: #ffffee;
+}
+
+input[required]:invalid, input[pattern]:invalid{
+  border-color: #fc0404;
+}
