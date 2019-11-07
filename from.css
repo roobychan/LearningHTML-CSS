@@ -1,6 +1,10 @@
 *{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+div {
+  margin: auto auto;
+  width: 50%;
+}
 
 fieldset{
   background-color: #dddcdd;
