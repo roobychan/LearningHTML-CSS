@@ -1,0 +1,94 @@
+
+
+body{
+  min-height: 100%;
+  min-width: 600px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+section{
+  margin-top: 10%;
+  text-align: center;
+  width: 100%;
+}
+
+#logo{
+  width: 272px;
+  height: 92px;
+}
+
+img{
+  padding-bottom: 3%;
+}
+
+.divs{
+  margin: auto auto;
+  width:60%;
+  max-width: 600px;
+}
+
+.search {
+  width: 100%;
+  height: 44px;
+  border: 1px solid rgba(80, 80, 80, .2);
+  border-radius: 25px;
+  padding-bottom: 7px;
+}
+nav{
+  display: block;
+  height: 30px;
+}
+
+
+nav span{
+  float: right;
+  padding-right: 5px;
+}
+
+@media screen and (max-width: 500px) {
+  nav span{
+    float: left;
+    /* background-color:red; */
+  }
+}
+svg{
+  line-height: 24px;
+}
+#stext{
+  display: inline-block;
+  border: none;
+  width:90%;
+  outline: none;
+  line-height: 30px;
+  font-size: 20px;
+}
+body{
+  font-size: small;
+}
+.search div{
+  display: inline-block;
+}
+div span{
+  width: 20px;
+  height: 20px;
+  margin-top: 15px;
+  display: inline-block;
+  color: #9AA0A6;
+  fill: currentColor;
+}
+
+#button{
+  padding: 10px;
+}
+
+a{
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  padding-top: 10px;
+  text-decoration: none;
+  background-color: rgba(180, 180, 180, 0.2);
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
