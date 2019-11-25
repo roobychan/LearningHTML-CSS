@@ -1,73 +1,160 @@
-
-
-body{
-  min-height: 100%;
-  min-width: 600px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  height: 100%;
+  min-width: 1139px;
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  font-size: small;
+  display: block;
 }
-section{
-  margin-top: 10%;
-  text-align: center;
+
+.gb {
+  /* top: 16px; */
+  top: 0px;
+  position: absolute;
   width: 100%;
 }
 
-#logo{
+a {
+  text-decoration: none;
+}
+
+.gb_nav {
+  top: 16px;
+  position: absolute;
+  width: 100%;
+}
+
+.unav {
+  display: block;
+  /* flex: 1,1,auto; */
+  /* float: right; */
+  text-align: right;
+  /* width: 100%; */
+  min-width: 165px;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* align-items: center; */
+  /* justify-content: flex-end; */
+  position: relative;
+}
+
+section {
+  display: block;
+  height: 233px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 35px;
+}
+
+.center {
+  width: 100%;
+  text-align: center;
+  height: 233px;
+}
+
+#logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 89px;
+  padding-top: 109px;
   width: 272px;
   height: 92px;
+  display: block;
+  /* padding-top: 109px; */
 }
 
-img{
+/* img{
   padding-bottom: 3%;
+} */
+.fsearch {
+  top: 311px;
+  position: absolute;
+  width: 100%;
+  min-width: 980px;
 }
 
-.divs{
-  margin: auto auto;
-  width:60%;
-  max-width: 600px;
+.divs {
+  margin: 0 auto;
+  display: block;
+  width: 584px;
+  /* position: relative; */
+
+}
+
+.form {
+  padding-top: 6px;
+  flex: 1;
+  display: flex;
+  /* padding: 5px 8px 0px 16px; */
+  /* padding-left: 14px; */
 }
 
 .search {
-  width: 100%;
+  width: 582px;
   height: 44px;
-  border: 1px solid rgba(80, 80, 80, .2);
-  border-radius: 25px;
-  padding-bottom: 7px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  /* padding-bottom: 7px; */
+  margin: 0, auto;
+  display: flex;
+  background-color: transparent;
+
 }
-nav{
-  display: block;
-  height: 30px;
+
+.input {
+  display: flex;
+  flex: 1;
+  font-size: 16px;
+  outline: none;
+  /* line-height: 34px;
+  height: 34px !important; */
+  /* color: transparent; */
+  color: rgba(0, 0, 0, 0.87);
+  border: none;
+  background-color: transparent;
+  writing-mode: horizontal-tb;
+}
+
+.icon {
+  padding-left: 14px;
+  margin-top: -3px;
+  padding-right: 13px;
 }
 
 
-nav span{
-  float: right;
-  padding-right: 5px;
+.urnav {
+  display: inline-block;
+  line-height: 24px;
+  outline: none;
+  vertical-align: middle;
+  text-align: right;
+  font-size: 13px;
+  padding-right: 15px;
 }
 
-@media screen and (max-width: 500px) {
-  nav span{
-    float: left;
-    /* background-color:red; */
-  }
+.urnav:hover {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: underline;
 }
-svg{
+
+svg {
   line-height: 24px;
 }
-#stext{
+
+/* #stext{
   display: inline-block;
   border: none;
   width:90%;
   outline: none;
   line-height: 30px;
   font-size: 20px;
-}
-body{
-  font-size: small;
-}
-.search div{
+} */
+
+.search div {
   display: inline-block;
 }
-div span{
+
+div span {
   width: 20px;
   height: 20px;
   margin-top: 15px;
@@ -76,19 +163,75 @@ div span{
   fill: currentColor;
 }
 
-#button{
-  padding: 10px;
+#button {
+  width: 571px;
+  height: 70px;
+  padding-top: 18px;
+  top: 53px;
+  position: absolute;
+  display: block;
+  /* padding: 10px; */
 }
 
-a{
-  width: 150px;
-  height: 40px;
-  font-size: 20px;
-  padding-top: 10px;
-  text-decoration: none;
-  background-color: rgba(180, 180, 180, 0.2);
+.btn {
+  background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 4px;
+  color: #5F6368;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  line-height: 27px;
+  height: 36px;
+  min-width: 54px;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.spc{
+  display: block;
+  font-size: 10px;
+  line-height: 40px;
+  min-width: 980px;
+  /* border-top: 1px solid #e4e4e4; */
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  height: auto;
+}
+
+footer{
+  display: block;
+  bottom: 0;
+  height: 35px;
+  position: fixed;
+  width: 100%;
+  visibility: visible;
+  border: 1px solid #e4e4e4;
+  background-color: #f2f2f2;
+  width: 100%;
+}
+
+.fllink{
+  margin-left: 30px;
+  width: auto;
+}
+
+.flink{
   display: inline-block;
-  border-radius: 5px;
-  margin-right: 10px;
+  color: #5F6368;
+  padding-left: 27px;
+  font-size: 13px;
+  line-height: 40px;
 }
 
+.frlink{
+  display: block;
+  width: auto;
+  float: right;
+  margin-right: 30px;
+}

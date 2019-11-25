@@ -1,9 +1,4 @@
-var test = ( parm ) => {
-  parm.name ="a";
-  parm = {
-    name: "b"
-  };
-};
+var test = newFunction();
 
 p = {
   name: "c"
@@ -16,3 +11,16 @@ var ary = ["a","b","c"];
 var removed = ary.splice(1, 1, "3","4","5");
 
 console.log(ary)
+
+console.log(ary.length);
+
+function newFunction ()
+{
+  return ( parm ) =>
+  {
+    parm.name = "a";
+    parm = {
+      name: "b"
+    };
+  };
+}
