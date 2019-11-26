@@ -8,10 +8,10 @@ body {
 }
 
 .gb {
-  /* top: 16px; */
   top: 0px;
   position: absolute;
   width: 100%;
+  min-width: 980px;
 }
 
 a {
@@ -26,15 +26,10 @@ a {
 
 .unav {
   display: block;
-  /* flex: 1,1,auto; */
-  /* float: right; */
   text-align: right;
-  /* width: 100%; */
   min-width: 165px;
   padding-left: 30px;
   padding-right: 30px;
-  /* align-items: center; */
-  /* justify-content: flex-end; */
   position: relative;
 }
 
@@ -44,11 +39,11 @@ section {
   text-align: center;
   width: 100%;
   padding-bottom: 35px;
+  min-width: 980px;
 }
 
 .center {
   width: 100%;
-  text-align: center;
   height: 233px;
 }
 
@@ -60,12 +55,8 @@ section {
   width: 272px;
   height: 92px;
   display: block;
-  /* padding-top: 109px; */
 }
 
-/* img{
-  padding-bottom: 3%;
-} */
 .fsearch {
   top: 311px;
   position: absolute;
@@ -77,7 +68,6 @@ section {
   margin: 0 auto;
   display: block;
   width: 584px;
-  /* position: relative; */
 
 }
 
@@ -85,8 +75,6 @@ section {
   padding-top: 6px;
   flex: 1;
   display: flex;
-  /* padding: 5px 8px 0px 16px; */
-  /* padding-left: 14px; */
 }
 
 .search {
@@ -94,7 +82,6 @@ section {
   height: 44px;
   border: 1px solid #dfe1e5;
   border-radius: 24px;
-  /* padding-bottom: 7px; */
   margin: 0, auto;
   display: flex;
   background-color: transparent;
@@ -106,9 +93,6 @@ section {
   flex: 1;
   font-size: 16px;
   outline: none;
-  /* line-height: 34px;
-  height: 34px !important; */
-  /* color: transparent; */
   color: rgba(0, 0, 0, 0.87);
   border: none;
   background-color: transparent;
@@ -141,15 +125,6 @@ svg {
   line-height: 24px;
 }
 
-/* #stext{
-  display: inline-block;
-  border: none;
-  width:90%;
-  outline: none;
-  line-height: 30px;
-  font-size: 20px;
-} */
-
 .search div {
   display: inline-block;
 }
@@ -170,7 +145,6 @@ div span {
   top: 53px;
   position: absolute;
   display: block;
-  /* padding: 10px; */
 }
 
 .btn {
@@ -196,7 +170,6 @@ div span {
   font-size: 10px;
   line-height: 40px;
   min-width: 980px;
-  /* border-top: 1px solid #e4e4e4; */
   bottom: 0;
   left: 0;
   position: absolute;
@@ -210,10 +183,8 @@ footer{
   height: 35px;
   position: fixed;
   width: 100%;
-  visibility: visible;
   border: 1px solid #e4e4e4;
   background-color: #f2f2f2;
-  width: 100%;
 }
 
 .fllink{
