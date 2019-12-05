@@ -60,3 +60,11 @@ var sum = values.reduce((prev, cur, index, array)=>{
 + length  
   number of parameters
 + prototype 
+
+## Private Scope
+
+```javascirpt
+(function (){
+  var i = 0;
+})();
+```
