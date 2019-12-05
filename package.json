@@ -1,0 +1,25 @@
+{
+  "name": "learninghtml-css",
+  "version": "1.0.0",
+  "description": "demo with angular",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server . -a localhost -p 8000 -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roobychan/LearningHTML-CSS.git"
+  },
+  "author": "rooby",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roobychan/LearningHTML-CSS/issues"
+  },
+  "homepage": "https://github.com/roobychan/LearningHTML-CSS#readme",
+  "dependencies": {
+    "angular": "^1.7.9",
+    "http-server": "^0.12.0",
+    "jquery": "^3.4.1"
+  }
+}
