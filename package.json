@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/roobychan/LearningHTML-CSS#readme",
   "dependencies": {
-    "angular": "^1.7.9",
+    "angular": "^1.8.0",
     "http-server": "^0.12.0",
     "jquery": "^3.4.1"
   }
